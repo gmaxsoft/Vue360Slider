@@ -1,0 +1,11 @@
+RewriteEngine On
+
+# Przekieruj wszystkie żądania API do odpowiedniego pliku PHP
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/(.*)$ api/$1 [L]
+
+# Pozwól na dostęp do plików statycznych
+<FilesMatch "\.(json|php)$">
+    Header set Access-Control-Allow-Origin "*"
+</FilesMatch>
