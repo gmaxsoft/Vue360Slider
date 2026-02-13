@@ -3,6 +3,7 @@
 const js = require('@eslint/js');
 const vue = require('eslint-plugin-vue');
 const vueParser = require('vue-eslint-parser');
+const globals = require('globals');
 
 module.exports = [
   // Ignorowane katalogi (build i zależności)
