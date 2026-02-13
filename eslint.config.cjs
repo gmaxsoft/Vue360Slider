@@ -2,6 +2,7 @@
 
 const js = require('@eslint/js');
 const vue = require('eslint-plugin-vue');
+const vueParser = require('vue-eslint-parser');
 
 module.exports = [
   // Ignorowane katalogi (build i zależności)
@@ -13,6 +14,7 @@ module.exports = [
   {
     files: ['src/**/*.{js,vue}'],
     languageOptions: {
+      parser: vueParser,
       ecmaVersion: 'latest',
       sourceType: 'module',
     },
