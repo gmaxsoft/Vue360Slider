@@ -18,8 +18,10 @@ module.exports = [
       parser: vueParser,
       ecmaVersion: 'latest',
       sourceType: 'module',
-      ...globals.browser, 
-      ...globals.node,
+      globals: {           // ✅ zagnieżdżone w globals: {}
+        ...globals.browser,
+        ...globals.node,
+      },
     },
     plugins: {
       vue,
