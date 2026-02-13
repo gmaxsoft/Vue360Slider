@@ -17,6 +17,8 @@ module.exports = [
       parser: vueParser,
       ecmaVersion: 'latest',
       sourceType: 'module',
+      ...globals.browser, 
+      ...globals.node,
     },
     plugins: {
       vue,
